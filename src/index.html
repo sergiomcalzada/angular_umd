@@ -11,7 +11,39 @@
   <script src="https://requirejs.org/docs/release/2.3.3/minified/require.js"></script>
   <script>
   requirejs.config({
+    map: {
+        '*': {
+            'rxjs': 'rxjs',
+            'rxjs/Observable': 'rxjs',
+            'rxjs/Subject': 'rxjs',
+            'rxjs/observable/merge': 'rxjs',
+            'rxjs/observable/of': 'rxjs',
+            'rxjs/observable/fromPromise': 'rxjs',  
+            'rxjs/observable/forkJoin': 'rxjs',
+            'rxjs/observable/from': 'rxjs',
+
+            'rxjs/operator/share': 'rxjs',            
+            'rxjs/operator/map': 'rxjs',
+            'rxjs/operator/reduce': 'rxjs',
+            'rxjs/operator/concatAll': 'rxjs',
+            'rxjs/operator/filter': 'rxjs',
+            'rxjs/operator/last': 'rxjs',
+            'rxjs/operator/concatMap': 'rxjs',
+            'rxjs/operator/first': 'rxjs',
+            'rxjs/operator/mergeAll': 'rxjs',
+            'rxjs/operator/mergeMap': 'rxjs',
+            'rxjs/operator/every': 'rxjs',
+            'rxjs/operator/catch': 'rxjs',
+
+            'rxjs/util/EmptyError': 'rxjs',
+
+            'rxjs/BehaviorSubject': 'rxjs'            
+        }
+    },
     paths: { 
+      "rxjs": [
+            'https://unpkg.com/rxjs@5.1.0/bundles/Rx.min'
+        ], 
       "@angular/core": [
             'https://npmcdn.com/@angular/core@4.1.2/bundles/core.umd'
         ],
