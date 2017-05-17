@@ -63,6 +63,59 @@ module.exports = {
       "./node_modules"
     ]
   },
+  "externals": [
+    {
+     '@angular/core': {
+       root: "ng.core",
+				commonjs2: "@angular/core",
+				commonjs: ["exports", "@angular/core"],
+				amd: "@angular/core"
+     },
+    '@angular/common': {
+       root: "ng.common",
+				commonjs2: "@angular/common",
+				commonjs: ["exports", "@angular/common"],
+				amd: "@angular/common"
+     },    
+     '@angular/compiler': {
+       root: "ng.compiler",
+				commonjs2: "@angular/compiler",
+				commonjs: ["exports", "@angular/compiler"],
+				amd: "@angular/compiler"
+     },
+     '@angular/router': {
+       root: "ng.router",
+				commonjs2: "@angular/router",
+				commonjs: ["exports", "@angular/router"],
+				amd: "@angular/router"
+     },
+     '@angular/http': {
+       root: "ng.http",
+				commonjs2: "@angular/http",
+				commonjs: ["exports", "@angular/http"],
+				amd: "@angular/http"
+     },
+     '@angular/forms': {
+       root: "ng.forms",
+				commonjs2: "@angular/forms",
+				commonjs: ["exports", "@angular/forms"],
+				amd: "@angular/forms"
+     },
+     '@angular/platform-browser': {
+       root: "ng.platformBrowser",
+				commonjs2: "@angular/platform-browser",
+				commonjs: ["exports", "@angular/platform-browser"],
+				amd: "@angular/platform-browser"
+     },
+    '@angular/platform-browser-dynamic': {
+          root: "ng.platformBrowserDynamic",
+            commonjs2: "@angular/platform-browser-dynamic",
+            commonjs: ["exports", "@angular/platform-browser-dynamic"],
+            amd: "@angular/platform-browser-dynamic"
+        },
+    
+  }
+  ],
   "entry": {
     "main": [
       "./src\\main.ts"
