@@ -37,7 +37,16 @@
             'https://npmcdn.com/@angular/compiler@4.1.2/bundles/compiler.umd'
         ]
     }
-  })
+  });
+
+ (function() {
+   //trigger page load
+     require(["inline.bundle"], function(){
+       require(["polyfills.bundle","styles.bundle"], function(){
+          require(["main.bundle"], function(){})
+        })
+     });
+  }())
   </script>
 </head>
 <body>
